@@ -18,11 +18,14 @@ from django.urls import path
 from django.urls import path, include
 from rest_framework import routers
 from todo import views
+from todo.views import create_todo, list_todos
+
 
 router = routers.DefaultRouter()
-router.register(r'todos', views.TodoView, 'todo')
-
+# router.register(r'todos', views.TodoView, 'todo')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/create_todo/', create_todo, name='create_todo'),  # URL for creating a todo
+     path('api/list_todos/', list_todos, name='list_todos'),
 ]

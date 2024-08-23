@@ -1,0 +1,23 @@
+For data passing betweeen react and django
+1.write views accordingly 
+2. setup urls.py (specifying the view and url that react and django hsould map)
+3. check urls and write react acoordingly 
+4. use fetch (.....) properly
+5. you may have to retrieve all the data when showing info on screen
+
+
+dbitems = item.objects.all().order_by('-list_date')
+item.objects.all().order_by('-      list_date').filter(is_published=True)
+
+
+
+you can use Django's authentication system exactly the same way as you would with SQLite, even when using MySQL. The key steps to ensure this are:
+
+1.Set Up MySQL in settings.py:
+2.Install MySQL Client:
+3.Migrate Database:
+4.Use Django Authentication as Usual:
+
+https://docs.djangoproject.com/en/5.1/
+https://training.github.com/downloads/github-git-cheat-sheet.pdf
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
